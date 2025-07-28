@@ -3,3 +3,13 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
 } */
+
+@theme {
+  --color-primary_color: #b0dd1d;
+  --color-bg_gray: #f2f4f6;
+  --color-text_color: #1a1a1a;
+}
+
+.custom_button_style {
+  @apply bg-primary_color text-text_color rounded-full px-[32px] py-[16px];
+}

@@ -1,8 +1,10 @@
+/* eslint-disable react/prop-types */
 import { Poppins } from "next/font/google";
 import "./globals.css";
+import React from "react";
 
 const poppins = Poppins({
-  weight: ["400", "600"],
+  weight: ["400", "600", "500"],
   subsets: ["latin"],
 });
 
