@@ -3,42 +3,47 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Card from "@/common/Card";
 
-import agri1 from "../public/assets/agri1.png";
-import agri2 from "../public/assets/agri2.png";
-import agri3 from "../public/assets/agri3.png";
-import agri4 from "../public/assets/agri4.png";
+import land1 from "../public/assets/land1.png";
+import land2 from "../public/assets/land2.png";
+import land3 from "../public/assets/land3.png";
+import land4 from "../public/assets/land4.png";
 import leftArrow from "../public/assets/arrowLeft.png";
 import rightArrow from "../public/assets/arrowRight.png";
 
 const products = [
-  { id: 1, title: "JF Barbed Wire- 270 GSM", price: "₹4,995.00", image: agri1 },
+  {
+    id: 1,
+    title: "Antiqo Fence",
+    price: "₹10,024.00 – ₹14,984.82",
+    image: land1,
+  },
   {
     id: 2,
-    title: "FGC RustFree Fencing Poles",
-    price: "₹499.00 – ₹1,589.00",
-    image: agri2,
+    title: "JF Australian Trellis",
+    price: "₹6,962.00",
+    image: land2,
   },
   {
     id: 3,
-    title: "GI Poultry Mesh",
-    price: "₹1,260.00 – ₹10,750.00",
-    image: agri3,
+    title: "JF Polyhex Mesh",
+    price: "₹4,050.00 – ₹10,770.00",
+    image: land3,
   },
   {
     id: 4,
-    title: "JF Bluelink Mesh",
-    price: "₹3,067.50 – ₹6,362.50",
-    image: agri4,
+    title: "JF Privezy Grass Wall",
+    price: "₹1,646.10 – ₹18,284.10",
+    image: land4,
   },
   {
     id: 5,
-    title: "Premium Chain Link Fence",
-    price: "₹2,450.00",
-    image: agri1,
+    title: "Antiqo Fence",
+    price: "₹10,024.00 – ₹14,984.82",
+    image: land1,
   },
 ];
 
-const AgricultureProduct = () => {
+const LandScapeProduct = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const nextSlide = () => {
@@ -90,4 +95,4 @@ const AgricultureProduct = () => {
   );
 };
 
-export default AgricultureProduct;
+export default LandScapeProduct;

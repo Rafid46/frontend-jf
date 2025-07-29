@@ -4,7 +4,7 @@ import "./globals.css";
 import React from "react";
 
 const poppins = Poppins({
-  weight: ["400", "600", "500"],
+  weight: ["200", "400", "600", "500"],
   subsets: ["latin"],
 });
 

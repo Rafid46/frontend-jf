@@ -5,7 +5,7 @@ import Button from "./Button";
 
 const Card = ({ product }) => {
   return (
-    <div className="w-[305px] h-[383px]">
+    <div className="w-[305px] h-[383px]  mb-[100px]">
       <div className="flex transition-transform duration-300 ease-in-out  rounded-[18px]">
         <div className="">
           <div className="bg-bg_gray rounded-[18px] transition-shadow duration-300">
