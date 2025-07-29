@@ -1,8 +1,8 @@
 @import "tailwindcss";
-/* 
+
 body {
-  font-family: Arial, Helvetica, sans-serif;
-} */
+  overflow-x: hidden;
+}
 
 @theme {
   --color-primary_color: #b0dd1d;
@@ -12,4 +12,13 @@ body {
 
 .custom_button_style {
   @apply bg-primary_color text-text_color rounded-full px-[32px] py-[16px];
+}
+
+.customBackground {
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  background-image: radial-gradient(rgba(12, 12, 12, 0.171) 2px, transparent 0);
+  background-size: 30px 30px;
+  background-position: -5px -5px;
 }

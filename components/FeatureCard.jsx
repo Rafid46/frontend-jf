@@ -32,7 +32,7 @@ const FeatureCard = () => {
     },
   ];
   return (
-    <div className="max-w-[1280px] mx-auto mt-[40px]">
+    <div className="max-w-[1280px] mx-auto mt-[40px] mb-[70px]">
       <section className="">
         <div className="">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-x-[40px]">
@@ -42,14 +42,27 @@ const FeatureCard = () => {
                 className={`
                     ${
                       (feature?.id === 1 || feature?.id === 3) && "mt-[60px]"
-                    } p-[40px] rounded-[24px] space-x-[40px] w-[400px] h-[500px] text-white bg-[radial-gradient(ellipse_at_top_right,_#1B7FE1_1%,_#002B55_100%)]`}
+                    } p-[40px] rounded-[24px] space-x-[40px] w-[400px] h-[500px] text-white ${
+                  feature?.id === 1 || feature?.id === 3
+                    ? "bg-[radial-gradient(ellipse_at_top_right,_#93C1ED_1%,_#F2F4F6_100%)]"
+                    : "bg-[radial-gradient(ellipse_at_top_right,_#1B7FE1_1%,_#002B55_100%)]"
+                }`}
               >
                 <div className="">
                   <Image alt="jf" width={49} height={70} src={feature?.icon} />
-                  <h3 className="text-[26px] font-[500] text-white leading-[130%] mt-[31px] mb-[20px]">
+                  <h3
+                    className={`text-[26px] font-[500] ${
+                      feature?.id === 2 ? "text-white" : "text-text_color"
+                    } leading-[130%] mt-[31px] mb-[20px]`}
+                  >
                     {feature.title}
                   </h3>
-                  <p className="text-[17px] font-[400] text-white leading-[150%] !mb-[50px]">
+                  <p
+                    className={`text-[17px] font-[400] ${
+                      (feature?.id === 1 || feature?.id === 3) &&
+                      "text-[#616161]"
+                    } leading-[150%] !mb-[50px]`}
+                  >
                     {feature.description}
                   </p>
                 </div>
