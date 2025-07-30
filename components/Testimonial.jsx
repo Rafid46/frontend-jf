@@ -41,25 +41,26 @@ export default function TestimonialCard() {
   const testimonial = testimonials[currentIndex];
 
   return (
-    <div className="mt-[65px] mb-[118px] max-w-[1280px] mx-auto">
-      <p className="text-center text-[42px] font-[500] text-text_color leading-[100%] mb-[40px]">
+    <div className="mt-[65px] mb-[118px] max-w-[1280px] mx-auto px-4">
+      <p className="text-center text-[32px] md:text-[42px] font-[500] text-text_color leading-[100%] mb-[40px]">
         Why Customers Love ❤️ Us?
       </p>
-      <div className="flex items-center justify-center gap-x-[40px]">
-        {/* card */}
-        <div className="w-[881px] h-[608px] bg-[#F2F4F6] rounded-[24px] flex flex-col justify-between">
-          {/* Top quote icon */}
-          <div className="text-[#A3D200] text-5xl  mb-[30px] max-w-[770px] max-h-[168px]  px-[60px] py-[70px]">
-            <Image alt="jf" src={quote} width={82} height={82} />
-            <p className="text-[#1A1A1A] text-[28px] leading-[150%] font-[400] ">
+
+      <div className="flex flex-col lg:flex-row items-center justify-center gap-y-[30px] lg:gap-x-[40px]">
+        {/* Testimonial Card */}
+        <div className="w-full max-w-[881px] h-auto lg:h-[608px] bg-[#F2F4F6] rounded-[24px] flex flex-col justify-between">
+          {/* Quote */}
+          <div className="text-[#A3D200] text-5xl mb-[30px] px-[30px] md:px-[60px] pt-[40px] md:pt-[70px]">
+            <Image alt="quote" src={quote} width={82} height={82} />
+            <p className="text-[#1A1A1A] text-[18px] md:text-[28px] leading-[150%] font-[400] mt-[20px]">
               {testimonial.quote}
             </p>
           </div>
 
           {/* Footer */}
-          <div className="max-mt-[100px]  px-[20px] pb-[20px]">
-            <div className="flex justify-between items-center customBackground rounded-[24px] px-[40px] py-[41px] max-w-[841px] max-h-[130px]">
-              <p className="font-[600] text-text_color text-[32px] leading-[150%]">
+          <div className="px-[20px] pb-[20px]">
+            <div className="flex flex-col md:flex-row justify-between items-center customBackground rounded-[24px] px-[30px] md:px-[40px] py-[30px] md:py-[41px] w-full">
+              <p className="font-[600] text-text_color text-[20px] md:text-[32px] text-center md:text-left mb-4 md:mb-0 leading-[150%]">
                 – {testimonial.author}
               </p>
 
@@ -68,24 +69,29 @@ export default function TestimonialCard() {
                   onClick={handlePrev}
                   className="flex items-center justify-center hover:bg-gray-100 rounded-full transition"
                 >
-                  <Image alt="jf" src={left} width={51} height={51} />
+                  <Image alt="left arrow" src={left} width={51} height={51} />
                 </button>
                 <button
                   onClick={handleNext}
-                  className="flex items-center justify-center hover:bg-gray-100 rounded-full transition  ml-[20px]"
+                  className="flex items-center justify-center hover:bg-gray-100 rounded-full transition ml-[10px]"
                 >
-                  <Image alt="jf" src={right} width={51} height={51} />
+                  <Image alt="right arrow" src={right} width={51} height={51} />
                 </button>
               </div>
             </div>
           </div>
         </div>
-        {/*  */}
-        <div className="">
-          <div className="bg-bg_gray rounded-[24px] w-[360px] h-[608px]">
-            <div className="p-[20px]">
-              <Image src={success} width={319} height={568} alt="jf" />
-            </div>
+
+        {/* Side Image */}
+        <div className="w-full max-w-[360px] h-auto lg:h-[608px] bg-bg_gray rounded-[24px]">
+          <div className="p-[20px]">
+            <Image
+              src={success}
+              width={319}
+              height={568}
+              alt="Success illustration"
+              className="w-full h-auto object-contain"
+            />
           </div>
         </div>
       </div>

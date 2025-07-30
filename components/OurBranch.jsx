@@ -61,105 +61,85 @@ const OurBranch = () => {
 
   return (
     <div className="max-w-[1280px] mx-auto mb-[110px]">
-      <div className="border border-[#002B5533] relative rounded-[24px]">
-        {/* Our Branches Section */}
-        <div className="flex flex-col items-center mt-[38px] mb-[20px]">
-          <div className="bg-[#E0FFB3] text-[#66CC00] text-sm font-semibold px-4 py-2 rounded-full absolute -top-[16px]">
+      <div className="border border-[#002B5533] relative rounded-[24px] bg-[#F2F4F6] pb-[10px]">
+        <div className="flex flex-col items-center relative mb-[40px]">
+          <div className="bg-[#E0FFB3] text-[#66CC00] text-sm font-semibold px-4 py-2 rounded-full absolute -top-[18px]">
             OUR BRANCHES
           </div>
-          <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-4 mb-8">
+          <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-4 mt-[33px]">
             {branches?.map((branch) => {
               const isSelected = branch.id === selectedBranchId;
               return (
-                <div className="w-[116px] h-[104px]" key={branch.id}>
-                  <button
-                    key={branch.id}
-                    className={`flex flex-col items-center p-2 rounded-lg transition-colors duration-200 w-[116px] h-[104px] ${
-                      isSelected
-                        ? "bg-[#F7FCE8] border border-[#B0DD1D]"
-                        : "border border-transparent"
-                    }`}
-                    onClick={() => setSelectedBranchId(branch.id)}
-                    aria-pressed={isSelected}
-                  >
-                    <div className="flex items-center justify-center w-[116px] h-[104px]">
-                      <Image
-                        src={branch.icon}
-                        alt={`${branch.name} icon`}
-                        width={40}
-                        height={40}
-                        className={`${
-                          isSelected ? "opacity-100" : "opacity-70"
-                        }`}
-                      />
-                    </div>
-
-                    <span
-                      className={`text-sm font-medium mt-2 text-text_color`}
-                    >
-                      {branch.name}
-                    </span>
-                  </button>
-                </div>
+                <button
+                  key={branch.id}
+                  className={`flex flex-col items-center justify-center w-[116px] h-[104px] p-2 rounded-lg transition-colors duration-200 ${
+                    isSelected
+                      ? "bg-[#F7FCE8] border border-[#B0DD1D]"
+                      : "border border-transparent"
+                  }`}
+                  onClick={() => setSelectedBranchId(branch.id)}
+                  aria-pressed={isSelected}
+                >
+                  <Image
+                    src={branch.icon}
+                    alt={`${branch.name} icon`}
+                    width={40}
+                    height={40}
+                    className={`${isSelected ? "opacity-100" : "opacity-70"}`}
+                  />
+                  <span className="text-sm font-medium mt-2 text-text_color">
+                    {branch.name}
+                  </span>
+                </button>
               );
             })}
           </div>
         </div>
 
-        {/* Contact Form and Map Section */}
-        <div className="flex items-center justify-center gap-x-[20px]">
+        {/* Contact Form and Map */}
+        <div className="flex flex-col lg:flex-row items-center justify-center gap-[20px] px-4 md:px-8">
           {/* Contact Form */}
-          <div className="bg-[#002B55]  rounded-[24px] shadow-lg w-[540px] h-[642px] px-[50px]">
-            <h2 className="text-[38px] font-[500] leading-[100%] text-white my-[30px]">
+          <div className="bg-[#002B55] rounded-[24px] shadow-lg w-full max-w-[540px] h-auto px-[24px] md:px-[40px] py-[30px]">
+            <h2 className="text-[28px] md:text-[32px] lg:text-[38px] font-[500] text-white mb-[24px]">
               Contact Us
             </h2>
             <form className="flex flex-col">
-              <input
-                type="text"
-                placeholder="Your Name"
-                className="mb-[20px] w-[440px] h-[60px] bg-white/10 rounded-[24px] border-none text-white placeholder:font-[400] leading-[100%] placeholder:text-white placeholder:text-[20px] pl-[30px] focus:ring-2 focus:ring-white"
-              />
-              <input
-                type="text"
-                placeholder="Email"
-                className="mb-[20px] w-[440px] h-[60px] bg-white/10 rounded-[24px] border-none text-white placeholder:font-[400] leading-[100%] placeholder:text-white placeholder:text-[20px] pl-[30px] focus:ring-2 focus:ring-white"
-              />
-              <input
-                type="text"
-                placeholder="Phone *"
-                className="mb-[20px] w-[440px] h-[60px] bg-white/10 rounded-[24px] border-none text-white placeholder:font-[400] leading-[100%] placeholder:text-white placeholder:text-[20px] pl-[30px] focus:ring-2 focus:ring-white"
-              />
-              <input
-                type="text"
+              {["Your Name", "Email", "Phone *"].map((placeholder, i) => (
+                <input
+                  key={i}
+                  type="text"
+                  placeholder={placeholder}
+                  className="mb-[16px] w-full h-[50px] md:h-[60px] bg-white/10 rounded-[24px] border-none text-white placeholder:font-[400] placeholder:text-white placeholder:text-[18px] md:placeholder:text-[20px] pl-[20px] focus:ring-2 focus:ring-white"
+                />
+              ))}
+              <textarea
                 placeholder="Write Message"
-                className="mb-[20px] w-[440px] h-[134px] bg-white/10 rounded-[24px] border-none text-white placeholder:font-[400] leading-[100%] placeholder:text-white placeholder:text-[20px] pl-[30px] 
-                pt-[20px] pb-[94px]  focus:ring-2 focus:ring-white"
+                className="mb-[16px] w-full h-[120px] md:h-[134px] bg-white/10 rounded-[24px] border-none text-white placeholder:font-[400] placeholder:text-white placeholder:text-[18px] md:placeholder:text-[20px] px-[20px] pt-[16px] focus:ring-2 focus:ring-white resize-none"
               />
-
               <Button
                 text="Submit"
-                className="my-[50px] w-fit bg-primary_color hover:bg-[#52A300] text-text_color text-[18px] font-[500] py-[16px] px-[32px] rounded-full transition-colors duration-200"
+                className="mt-[24px] md:mt-[40px] w-fit bg-primary_color hover:bg-[#52A300] text-text_color text-[16px] md:text-[18px] font-[500] py-[12px] md:py-[16px] px-[24px] md:px-[32px] rounded-full transition-colors duration-200"
               />
             </form>
           </div>
 
-          {/* Map and Address */}
-          <div className="relative rounded-[24px] w-[700px] h-[642px]">
+          {/* Map Card */}
+          <div className="relative w-full max-w-[700px] h-[350px] md:h-[500px] lg:h-[642px] rounded-[24px] mt-[24px] lg:mt-0">
             <Image
               fill
               src={map}
               alt="Map of the branch location"
-              objectFit="cover rounded-[24px]"
+              className="rounded-[24px] object-cover"
             />
-            <div className="w-[680px] h-[116px] absolute bottom-4 left-4 right-4 bg-white rounded-[24px] shadow-md flex items-center py-[35px] px-[35px]">
+            <div className="absolute bottom-4 left-4 right-4 bg-white rounded-[24px] shadow-md flex flex-col md:flex-row items-start md:items-center py-[20px] md:py-[35px] px-[20px] md:px-[35px] gap-4">
               <Image
                 alt="jf"
                 width={47}
                 height={47}
                 src={location}
-                className="rounded-[24px] mr-[30px]"
+                className="rounded-[24px]"
               />
-              <p className="text-text_color font-[600] text-[18px]">
+              <p className="text-text_color font-[600] text-[16px] md:text-[18px]">
                 {currentAddress}
               </p>
             </div>

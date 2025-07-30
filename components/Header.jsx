@@ -1,7 +1,6 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
-import logo from "../public/assets/logo.png";
 import search from "../public/assets/user.svg";
 import user from "../public/assets/Frame.svg";
 import cart from "../public/assets/cart.svg";
@@ -12,7 +11,7 @@ const Header = () => {
 
   const toggleMenu = () => setIsOpen(!isOpen);
   return (
-    <header className="mx-auto w-[1280px]  lg:py-[45px]">
+    <header className="mx-auto max-w-[1280px]  lg:py-[45px]">
       <div className="">
         <nav className="flex items-center justify-between">
           {/* Mobile Menu Button */}
@@ -66,18 +65,6 @@ const Header = () => {
             ))}
           </div>
 
-          {/* Center Logo */}
-          {/* <div className="absolute left-1/2 top-[68px] -translate-x-1/2 -translate-y-1/2 hidden lg:block z-10">
-            <Image
-              className=""
-              src={logo}
-              alt="Logo"
-              width={132.1}
-              height={150}
-            />
-          </div> */}
-
-          {/* Right Auth Buttons */}
           <div className="hidden lg:flex lg:items-center">
             <a
               href="#"
@@ -109,17 +96,15 @@ const Header = () => {
         {/* Mobile Menu Items */}
         {isOpen && (
           <nav className="flex flex-col py-4 space-y-2 lg:hidden">
-            {["Home", "Shop", "Blog", "Contact", "Sign up", "Sign in"].map(
-              (item) => (
-                <a
-                  key={item}
-                  href="#"
-                  className="py-2 text-[18px] font-[400] text-[rgb(26, 26, 26)] transition hover:text-blue-600"
-                >
-                  {item}
-                </a>
-              )
-            )}
+            {["Home", "Shop", "Blog", "Contact", "Login"].map((item) => (
+              <a
+                key={item}
+                href="#"
+                className="py-2 text-[18px] font-[400] text-[rgb(26, 26, 26)] transition hover:text-blue-600"
+              >
+                {item}
+              </a>
+            ))}
           </nav>
         )}
       </div>

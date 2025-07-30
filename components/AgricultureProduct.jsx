@@ -53,7 +53,7 @@ const AgricultureProduct = () => {
       <p className="font-[500] text-[42px] text-text_color leading-[100%] mb-[30px]">
         Landscape Products
       </p>
-      {/* Arrows */}
+
       <button
         onClick={prevSlide}
         className="absolute w-[47px] h-[47px]  z-10 -left-[20px] top-1/2 -translate-y-1/2  md:w-12 md:h-12 flex items-center justify-center bg-white border border-text_color rounded-full p-[13.5px]"
@@ -68,7 +68,6 @@ const AgricultureProduct = () => {
         <Image src={rightArrow} alt="next" width={20} height={20} />
       </button>
 
-      {/* Track */}
       <div className="overflow-hidden">
         <div
           className="flex transition-transform duration-500 ease-in-out gap-x-[10px]"

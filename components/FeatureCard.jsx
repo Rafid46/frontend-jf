@@ -32,10 +32,10 @@ const FeatureCard = () => {
     },
   ];
   return (
-    <div className="max-w-[1280px] mx-auto mt-[40px] mb-[70px]">
+    <div className="max-w-[1280px] mx-3 lg:mx-auto mt-[40px] mb-[70px]">
       <section className="">
         <div className="">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-x-[40px]">
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-x-[40px] mt-4">
             {features.map((feature, index) => (
               <div
                 key={index}
