@@ -8,6 +8,7 @@ import FeatureCard from "@/components/FeatureCard";
 import RibonSlider from "@/components/RibonSlider";
 import Testimonial from "@/components/Testimonial";
 import OurBranch from "@/components/OurBranch";
+import Footer from "@/components/Footer";
 
 const Page = () => {
   return (
@@ -21,6 +22,7 @@ const Page = () => {
       <RibonSlider />
       <Testimonial />
       <OurBranch />
+      <Footer />
     </div>
   );
 };

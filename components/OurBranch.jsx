@@ -9,7 +9,7 @@ import goa from "../public/branches/four.svg";
 import kochi from "../public/branches/five.svg";
 import mumbai from "../public/branches/six.svg";
 import map from "../public/assets/MAP.png";
-// import location from "../public/assets/location.svg";
+import location from "../public/assets/location.svg";
 const OurBranch = () => {
   const branches = [
     {
@@ -60,10 +60,10 @@ const OurBranch = () => {
     branches.address;
 
   return (
-    <div className="">
-      <div className="max-w-[1280px] mx-auto rounded-[24px] border border-[#002B5533] p-6 lg:p-10 relative">
+    <div className="max-w-[1280px] mx-auto mb-[110px]">
+      <div className="border border-[#002B5533] relative rounded-[24px]">
         {/* Our Branches Section */}
-        <div className="flex flex-col items-center mb-8">
+        <div className="flex flex-col items-center mt-[38px] mb-[20px]">
           <div className="bg-[#E0FFB3] text-[#66CC00] text-sm font-semibold px-4 py-2 rounded-full absolute -top-[16px]">
             OUR BRANCHES
           </div>
@@ -109,33 +109,36 @@ const OurBranch = () => {
         {/* Contact Form and Map Section */}
         <div className="flex items-center justify-center gap-x-[20px]">
           {/* Contact Form */}
-          <div className="bg-[#002B55] p-8 rounded-[24px] shadow-lg w-[540px] h-[642px]">
-            <h2 className="text-3xl font-bold text-white mb-6">Contact Us</h2>
-            <form className="space-y-6 flex flex-col">
+          <div className="bg-[#002B55]  rounded-[24px] shadow-lg w-[540px] h-[642px] px-[50px]">
+            <h2 className="text-[38px] font-[500] leading-[100%] text-white my-[30px]">
+              Contact Us
+            </h2>
+            <form className="flex flex-col">
               <input
                 type="text"
                 placeholder="Your Name"
-                className="bg-[#003F7F] border-none text-white placeholder:text-gray-300 p-4 rounded-lg focus:ring-2 focus:ring-white"
+                className="mb-[20px] w-[440px] h-[60px] bg-white/10 rounded-[24px] border-none text-white placeholder:font-[400] leading-[100%] placeholder:text-white placeholder:text-[20px] pl-[30px] focus:ring-2 focus:ring-white"
               />
               <input
-                type="email"
+                type="text"
                 placeholder="Email"
-                className="bg-[#003F7F] border-none text-white placeholder:text-gray-300 p-4 rounded-lg focus:ring-2 focus:ring-white"
+                className="mb-[20px] w-[440px] h-[60px] bg-white/10 rounded-[24px] border-none text-white placeholder:font-[400] leading-[100%] placeholder:text-white placeholder:text-[20px] pl-[30px] focus:ring-2 focus:ring-white"
               />
               <input
-                type="tel"
+                type="text"
                 placeholder="Phone *"
-                required
-                className="bg-[#003F7F] border-none text-white placeholder:text-gray-300 p-4 rounded-lg focus:ring-2 focus:ring-white"
+                className="mb-[20px] w-[440px] h-[60px] bg-white/10 rounded-[24px] border-none text-white placeholder:font-[400] leading-[100%] placeholder:text-white placeholder:text-[20px] pl-[30px] focus:ring-2 focus:ring-white"
               />
               <input
-                placeholder="Write message"
-                className="bg-[#003F7F] border-none text-white placeholder:text-gray-300 p-4 rounded-lg min-h-[120px] focus:ring-2 focus:ring-white"
+                type="text"
+                placeholder="Write Message"
+                className="mb-[20px] w-[440px] h-[134px] bg-white/10 rounded-[24px] border-none text-white placeholder:font-[400] leading-[100%] placeholder:text-white placeholder:text-[20px] pl-[30px] 
+                pt-[20px] pb-[94px]  focus:ring-2 focus:ring-white"
               />
+
               <Button
                 text="Submit"
-                type="submit"
-                className="w-full bg-[#66CC00] hover:bg-[#52A300] text-[#002B55] font-bold py-3 rounded-lg transition-colors duration-200"
+                className="my-[50px] w-fit bg-primary_color hover:bg-[#52A300] text-text_color text-[18px] font-[500] py-[16px] px-[32px] rounded-full transition-colors duration-200"
               />
             </form>
           </div>
@@ -143,21 +146,20 @@ const OurBranch = () => {
           {/* Map and Address */}
           <div className="relative rounded-[24px] w-[700px] h-[642px]">
             <Image
+              fill
               src={map}
               alt="Map of the branch location"
-              layout="fill"
-              objectFit="cover"
-              className="rounded-xl"
+              objectFit="cover rounded-[24px]"
             />
-            <div className="absolute bottom-4 left-4 right-4 bg-white p-4 rounded-[24px] shadow-md flex items-center gap-3">
+            <div className="w-[680px] h-[116px] absolute bottom-4 left-4 right-4 bg-white rounded-[24px] shadow-md flex items-center py-[35px] px-[35px]">
               <Image
                 alt="jf"
-                width={700}
-                height={642}
+                width={47}
+                height={47}
                 src={location}
-                className="rounded-[24px]"
+                className="rounded-[24px] mr-[30px]"
               />
-              <p className="text-gray-800 text-sm font-medium">
+              <p className="text-text_color font-[600] text-[18px]">
                 {currentAddress}
               </p>
             </div>
