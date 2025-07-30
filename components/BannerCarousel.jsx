@@ -58,7 +58,7 @@ const BannerCarousel = () => {
             }%)`,
           }}
         >
-          {testimonials.map((item, index) => (
+          {testimonials.map((item) => (
             <div
               key={item.id}
               className="w-[400px] sm:w-full lg:w-[1280px] flex-shrink-0 bg-[#F2F4F6] rounded-[16px] sm:rounded-[20px] lg:rounded-[24px] overflow-hidden flex flex-col lg:flex-row"
