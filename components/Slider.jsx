@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-
+import React from "react";
 const Slider = () => {
   const logos = ["/logo1.png", "/logo2.png", "/logo3.png", "/logo4.png"];
   const ticker = {

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, React } from "react";
 import banner1 from "../public/assets/banner1.png";
 import leftArrow from "../public/assets/leftArrow.svg";
 import rightArrow from "../public/assets/rightArrow.svg";
